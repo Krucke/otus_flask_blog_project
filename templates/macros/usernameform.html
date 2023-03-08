@@ -1,0 +1,7 @@
+{% macro usernameform(placeholder, submit_text='send') %}
+<form method="get">
+    <label for="input-id">Username</label>
+    <input type="text" name="username" id="input-id" placeholder="{{ placeholder }}">
+    <button type="submit">{{submit_text}}</button>
+</form>
+{% endmacro %}
