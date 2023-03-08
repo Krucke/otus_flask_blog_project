@@ -1,12 +1,92 @@
 {% extends 'base.html' %}
-{% from "macros/usernameform.html" import usernameform %}
-{% block title %}
-Главная
-{% endblock %}
+{% block title %}Главная{% endblock %}
 {% block content %}
-<h1>Главная страница</h1>
-<div>
-    {{ usernameform('John', 'sssss')}}
-    {{ usernameform('Greg')}}
+<div class="container">
+    <h1 class="text-center mt-4">Последние новости {{ name }}</h1>
+    <div class="news-tags">
+        <a href="" class="news-tags__item active">Все</a>
+        <a href="" class="news-tags__item">Тег 1</a>
+        <a href="" class="news-tags__item">Тег 2</a>
+        <a href="" class="news-tags__item">Тег 3</a>
+        <a href="" class="news-tags__item">Тег 4</a>
+    </div>
+    <div class="news-list">
+        <a href="post.html" class="news-list__cart">
+            <div class="cart__image">
+                <img src="images/t1673684614.jpg" alt="">
+            </div>
+            <div class="cart__title">
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, recusandae?</h3>
+            </div>
+            <div class="cart__footer">
+                <span class="cart__footer-date">10.01.2023</span>
+            </div>
+        </a>
+        <a href="post.html" class="news-list__cart">
+            <div class="cart__image">
+                <img src="images/post_image2.jpeg" alt="">
+            </div>
+            <div class="cart__title">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+            </div>
+            <div class="cart__footer">
+                <span class="cart__footer-date">10.01.2023</span>
+            </div>
+        </a>
+        <a href="post.html" class="news-list__cart">
+            <div class="cart__image">
+                <img src="images/post_image3.jpg" alt="">
+            </div>
+            <div class="cart__title">
+                <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis perferendis maxime cupiditate
+                    suscipit.</h3>
+            </div>
+            <div class="cart__footer">
+                <span class="cart__footer-date">10.01.2023</span>
+            </div>
+        </a>
+        <a href="post.html" class="news-list__cart">
+            <div class="cart__image">
+                <img src="images/post_image4.jpg" alt="">
+            </div>
+            <div class="cart__title">
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+            </div>
+            <div class="cart__footer">
+                <span class="cart__footer-date">10.01.2023</span>
+            </div>
+        </a>
+        <a href="post.html" class="news-list__cart">
+            <div class="cart__image">
+                <img src="images/post_image5.jpg" alt="">
+            </div>
+            <div class="cart__title">
+                <h3>Lorem ipsum dolor sit.</h3>
+            </div>
+            <div class="cart__footer">
+                <span class="cart__footer-date">10.01.2023</span>
+            </div>
+        </a>
+        <a href="post.html" class="news-list__cart">
+            <div class="cart__image">
+                <img src="images/post_image2.jpeg" alt="">
+            </div>
+            <div class="cart__title">
+                <h3>Lorem ipsum dolor sit.</h3>
+            </div>
+            <div class="cart__footer">
+                <span class="cart__footer-date">10.01.2023</span>
+            </div>
+        </a>
+    </div>
+    <div class="pagination">
+        <div class="news-tags">
+            <a href="" class="news-tags__item active">1</a>
+            <a href="" class="news-tags__item">2</a>
+            <a href="" class="news-tags__item">3</a>
+            <a href="" class="news-tags__item">4</a>
+            <a href="" class="news-tags__item">5</a>
+        </div>
+    </div>
 </div>
 {% endblock %}

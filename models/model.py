@@ -16,13 +16,15 @@ from sqlalchemy.orm import (
     backref,
 )
 from .database import db
+from flask_login import UserMixin
 
 
-class User(db.Model):
+class User(db.Model, UserMixin):
 
     id = Column(Integer, primary_key=True)
     username = Column(String(32), unique=True, nullable=False)
-    password = Column(String(32), nullable=False)
+    password = Column(String(100), nullable=False)
+    name = Column(String(32))
 
     def __str__(self) -> str:
         return f"User(id={self.id}, username={self.username!r}, age={self.age})"
