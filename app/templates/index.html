@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}Главная{% endblock %}
+{% block content %}
+<div class="container">
+    <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nulla repellendus rem 
+        voluptatibus blanditiis iusto eum dignissimos facere debitis nobis quas
+        praesentium, placeat minima culpa? Voluptate enim quam necessitatibus qui, 
+        commodi laborum ab exercitationem similique numquam eum aliquam et, expedita odit sequi animi 
+        inventore culpa esse modi beatae consequuntur quas.
+    </p>
+    <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nulla repellendus rem 
+        voluptatibus blanditiis iusto eum dignissimos facere debitis nobis quas
+        praesentium, placeat minima culpa? Voluptate enim quam necessitatibus qui, 
+        commodi laborum ab exercitationem similique numquam eum aliquam et, expedita odit sequi animi 
+        inventore culpa esse modi beatae consequuntur quas.
+    </p>
+    <h1 class="text-center mt-4">Последние новости</h1>
+    <div class="news-list">
+        {% for post in posts %}
+        <a href="/posts/{{post.id}}" class="news-list__cart">
+            <div class="cart__image">
+                <img src="{{ post.link_image }}" alt="">
+            </div>
+            <div class="cart__title">
+                <h3>{{ post.title }}</h3>
+            </div>
+            <div class="cart__footer">
+                <span class="cart__footer-date">{{ post.created_at.strftime("%d.%m.%Y") }}</span>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+    <a href="/posts" class="text-center d-block">К полному списку новостей</a>
+    <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nulla repellendus rem 
+        voluptatibus blanditiis iusto eum dignissimos facere debitis nobis quas
+        praesentium, placeat minima culpa? Voluptate enim quam necessitatibus qui, 
+        commodi laborum ab exercitationem similique numquam eum aliquam et, expedita odit sequi animi 
+        inventore culpa esse modi beatae consequuntur quas.
+    </p>
+    <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nulla repellendus rem 
+        voluptatibus blanditiis iusto eum dignissimos facere debitis nobis quas
+        praesentium, placeat minima culpa? Voluptate enim quam necessitatibus qui, 
+        commodi laborum ab exercitationem similique numquam eum aliquam et, expedita odit sequi animi 
+        inventore culpa esse modi beatae consequuntur quas.
+    </p>
+</div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h3 class="text-center mt-4">Авторизация</h3>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="p-3 text-danger bg-danger-subtle border border-danger-subtle rounded-3 mb-3">
+            {{ messages[0] }}
+        </div>
+        {% endif %}
+    {% endwith %}
+    <form method="POST" action="/login" class="d-flex flex-column align-items-center">
+        <div class="col-md-6 mb-3">
+            <label for="" class="form-label">Логин</label>
+            <input class="form-control" type="text" name="email" placeholder="Your Email" autofocus="">
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <label for="password-input" class="form-label">Пароль</label>
+            <input class="form-control" 
+            type="password"
+            name="password"
+            id="password-input"
+            placeholder="Пароль..."
+            >
+        </div>
+        <button class="btn btn-primary w-50">Войти</button>
+    </form>
+</div>
+{% endblock %}
